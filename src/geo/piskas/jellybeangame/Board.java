@@ -22,7 +22,7 @@
 package geo.piskas.jellybeangame;
 
 import java.util.Random;
-
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.ColorMatrix;
@@ -37,7 +37,6 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
-
 import com.nineoldandroids.animation.TimeAnimator;
 import com.nineoldandroids.view.ViewHelper;
 
@@ -141,7 +140,8 @@ public class Board extends RelativeLayout {
 			super(context, as);
 		}
 
-		private void pickBean() {
+		@SuppressLint("NewApi")
+        private void pickBean() {
 			int beanId; 
 			if (randfrange(0,1) <= LUCKY) {
                 beanId = R.drawable.jandycane;
